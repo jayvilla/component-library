@@ -1,5 +1,4 @@
 /* Tailwind base layers */
-@import "tailwindcss";
 @import "tailwindcss" layer(base);
 @import "tailwindcss" layer(components);
 @import "tailwindcss" layer(utilities);
