@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Component Library — Tailwind + Next.js UI System
 
-## Getting Started
+A modern, reusable component library built with **Next.js 14**, **Tailwind CSS v4**, and a clean design-token system.  
+Inspired by libraries like **ShadCN/UI**, **Radix Primitives**, and **Chakra UI**, this project provides a flexible set of components you can use across any app.
 
-First, run the development server:
+---
+
+## 🚀 Features
+
+- **Modern Tailwind v4 design system**
+- **Dark + Light mode support**
+- **Reusable UI primitives** (Buttons, Inputs, Cards, etc.)
+- **Accessible components** (Tabs, Tooltip, Dialog)
+- **Toast system with variants + stacking**
+- **Dropdown with floating-ui positioning**
+- **Fully documented example pages**
+- Clean folder structure
+- Built on Next.js App Router
+
+---
+
+## 🧱 Tech Stack
+
+- **Next.js 14 (App Router)**
+- **React 18**
+- **Tailwind CSS v4**
+- **floating-ui** (Popover & Tooltip positioning)
+- **TypeScript**
+- **clsx + tailwind-merge** (class merging)
+- **Design tokens** via CSS variables
+
+---
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+  app/
+    layout.tsx
+    globals.css
+    docs/
+      layout.tsx
+      sidebar.tsx
+      page.tsx
+      examples/
+        buttons/
+        inputs/
+        cards/
+        tabs/
+        modals/
+        dropdowns/
+        tooltips/
+        toasts/
+  components/
+    ui/
+      button.tsx
+      input.tsx
+      card.tsx
+      tabs.tsx
+      dialog.tsx
+      dropdown.tsx
+      tooltip.tsx
+      toast/
+        toast.tsx
+        toast-provider.tsx
+  lib/
+    utils.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠 Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Clone the repository:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+git clone <your-repo-url>
+cd component-library
+```
 
-## Learn More
+### Install dependencies using pnpm:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pnpm install
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Start the Next.js development server:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+pnpm dev
+```
 
-## Deploy on Vercel
+### Your component documentation will be available at:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```base
+http://localhost:3000/docs
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Example pages for individual components
+
+```bash
+/docs/examples/buttons
+/docs/examples/inputs
+/docs/examples/cards
+/docs/examples/tabs
+/docs/examples/modals
+/docs/examples/dropdowns
+/docs/examples/tooltips
+/docs/examples/toasts
+```
