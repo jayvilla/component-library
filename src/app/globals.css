@@ -1,13 +1,50 @@
+/* Tailwind base layers */
+@import "tailwindcss";
+@import "tailwindcss/utilities";
+
+/* =========================================
+   🌗 THEME VARIABLES (LIGHT + DARK)
+========================================= */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: hsl(222.2 47.4% 11.2%);
+  --primary-foreground: hsl(210 40% 98%);
+
+  --secondary: hsl(210 40% 96.1%);
+  --secondary-foreground: hsl(222.2 47.4% 11.2%);
+
+  --muted: hsl(210 40% 96.1%);
+  --muted-foreground: hsl(215 16.3% 46.9%);
+
+  --destructive: hsl(0 72% 51%);
+  --destructive-foreground: #ffffff;
+
+  --radius: 0.5rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+
+    --primary: hsl(210 40% 98%);
+    --primary-foreground: hsl(222.2 47.4% 11.2%);
   }
+}
+
+/* =========================================
+   🔧 GLOBAL RESET + BASE
+========================================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -17,17 +54,14 @@ body {
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* Subtle transitions for theme switching */
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 a {
@@ -35,8 +69,17 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+/* =========================================
+   🎯 FOCUS STYLES (Accessible)
+========================================= */
+*:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--primary), 0 0 0 4px var(--background);
+}
+
+/* =========================================
+   🌒 DARK MODE OPT-IN (Class-based)
+========================================= */
+html.dark {
+  color-scheme: dark;
 }
