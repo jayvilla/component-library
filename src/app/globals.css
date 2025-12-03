@@ -1,8 +1,8 @@
 /* Tailwind base layers */
 @import "tailwindcss";
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "tailwindcss" layer(base);
+@import "tailwindcss" layer(components);
+@import "tailwindcss" layer(utilities);
 
 /* =========================================
    🌗 THEME VARIABLES (LIGHT + DARK)
